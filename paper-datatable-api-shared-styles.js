@@ -1,8 +1,10 @@
-<link rel="import" href="../paper-styles/color.html">
-<link rel="import" href="../paper-styles/default-theme.html">
-<link rel="import" href="../paper-styles/typography.html">
+import '../@polymer/paper-styles/color.js';
+import '../@polymer/paper-styles/default-theme.js';
+import '../@polymer/paper-styles/typography.js';
+const $_documentContainer = document.createElement('template');
+$_documentContainer.setAttribute('style', 'display: none;');
 
-<dom-module id="paper-datatable-api-shared-styles">
+$_documentContainer.innerHTML = `<dom-module id="paper-datatable-api-shared-styles">
   <template>
     <style>
       :host {
@@ -98,4 +100,6 @@
 
     </style>
   </template>
-</dom-module>
+</dom-module>`;
+
+document.head.appendChild($_documentContainer.content);
