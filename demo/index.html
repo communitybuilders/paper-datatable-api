@@ -4,7 +4,7 @@
     <title>paper-datatable-api demo</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
     <script>
       window.Polymer = {
         dom: 'shadow',
@@ -37,14 +37,15 @@
         padding: 16px;
       }
     </style>
+    <style include="iron-flex iron-flex-alignment"></style>
   </head>
   <body class="fullbleed">
 
-    <template is="dom-bind">
-      <style include="iron-flex iron-flex-alignment"></style>
+  <demo-snippet>
+    <dom-bind>
+    <template>
       <div class="container">
         <paper-header-panel class="flex">
-          <paper-toolbar>
             <paper-tabs attr-for-selected="demo" selected="{{selected}}">
               <paper-tab demo="advanced">Advanced demo</paper-tab>
               <paper-tab demo="simple">Simple demo</paper-tab>
@@ -54,7 +55,6 @@
               <paper-tab demo="frontpagination">Front side pagination</paper-tab>
               <paper-tab demo="styling">Styling demo</paper-tab>
             </paper-tabs>
-          </paper-toolbar>
           <div class="main">
             <template is="dom-if" if="[[equals('advanced', selected)]]">
               <advanced-demo></advanced-demo>
@@ -83,14 +83,14 @@
         </paper-header-panel>
       </div>
     </template>
+    </dom-bind>
+  </demo-snippet>
 
     <script>
-      var t = document.querySelector('template[is="dom-bind"]');
-
+      var t = document.querySelector('dom-bind');
       t.equals = function(target, value) {
         return target === value;
       };
-
       t.selected = 'advanced';
     </script>
 
