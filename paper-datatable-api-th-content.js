@@ -1,4 +1,4 @@
-import { PolymerElement } from '../@polymer/polymer/polymer-element.js';
+import { PolymerElement } from '@polymer/polymer/polymer-element.js';
 import '@polymer/iron-flex-layout/iron-flex-layout-classes.js';
 import { AppLocalizeBehavior } from '@polymer/app-localize-behavior/app-localize-behavior.js';
 import './paper-datatable-api-icons.js';

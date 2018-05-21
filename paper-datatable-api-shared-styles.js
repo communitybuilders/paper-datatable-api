@@ -1,6 +1,6 @@
-import '../@polymer/paper-styles/color.js';
-import '../@polymer/paper-styles/default-theme.js';
-import '../@polymer/paper-styles/typography.js';
+import '@polymer/paper-styles/color.js';
+import '@polymer/paper-styles/default-theme.js';
+import '@polymer/paper-styles/typography.js';
 const $_documentContainer = document.createElement('template');
 $_documentContainer.setAttribute('style', 'display: none;');
 
